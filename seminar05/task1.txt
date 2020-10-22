@@ -1,13 +1,109 @@
 # print your command here
 
-a. git init ...
+a. 
+git init linux-practice
 
-b.
+
+
+b. 
+> bio.md
+Содержимое bio.md написал в VScode:
+#### Ilya Tyuryaev ![alt text][logo]
+
+[logo]: https://emkn.ru/static/v1/img/lms/logo.cc84512194df.svg "Logo Title Text 2"
+#####18 y.o.
+##### tyuryaev2002@mail.ru
+
+![alt text](https://sun1-84.userapi.com/impg/okuHlcx53ctV0O_Yb1BmjMObr9_KYQtETdOGMg/gTt_dUwGaAE.jpg?size=200x0&quality=90&crop=135,0,1021,1021&sign=bccbc27765f9cc80c4634d41166c1509&ava=1)
+
+> main.cpp
+Содержимое main.cpp написал в VScode:
+#include <iostream>
+using namespace std;
+
+int main(){
+    cout<<"Hello World\n";
+    return 0;
+}
+
+git add .
+git commit -am "Add bio and main"
+
+
+
+
 
 c.
+> Makefile
+Содержимое Makefile написал в VScode:
+SHELL := /bin/bash
+build_main: main.cpp
+	g++ main.cpp -o main 
+run_main: build_main 
+	./main
+	
+	
+make run_main
+git add main.cpp
+git add Makefile
+git commit -am "Add Makefile"
+
+
+
+
+
+
 
 d.
+> song.txt
+Содержимое:
+Rescue Rangers 
+
+Слишком часто беда стучится в двери
+Но не трудно в Спасателей поверить
+Лишь стоит только их позвать
+Друзей не надо долго ждать
+Чип Чип Чип Чип и Дейл к вам спешат
+Чип Чип Чип Чип и Дейл лучше всех
+Они всегда спешат туда где ждёт беда
+Там где они всегда успех
+Чип Чип Чип Чип и Дейл к вам спешат
+Чип Чип Чип Чип и Дейл лучше всех
+Они всегда спешат туда где ждёт беда
+Там где они всегда успех
+Чип Чип Чип Чип и Дейл к вам спешат
+Чип Чип Чип Чип и Дейл лучше всех
+
+git add .
+git commit -am "Add song"
+git add .
+git commit -am "Fixe song"
+git add .
+git commit -am "Fixe name of song"
+
+
+
 
 e.
+git checkout 66bc703b9914945557cd161f3f63982e1fe80a87
+git checkout -b cmake
+> CMakeLists.txt
+Содержимое CMakeLists.txt написал в VScode:
+cmake_minimum_required(VERSION 3.10)
+project(main)
+add_executable(main main.cpp)
+
+cmake ~/linux-practice
+make
+./main
+
+
+
+
 
 f.
+git add CMakeLists.txt
+git commit -am "add CMakeLists"
+git checkout master
+git merge cmake
+
